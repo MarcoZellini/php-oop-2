@@ -64,6 +64,14 @@ class Food extends Product
     }
 
     /**
+     * Get all details values
+     */
+    public function getDetails()
+    {
+        return "Type: " . $this->getType() . " <br> Weight: " . $this->getWeight() . "g <br> Expire: " . $this->getExpiration();
+    }
+
+    /**
      * Display all class properties
      */
     public function toString()

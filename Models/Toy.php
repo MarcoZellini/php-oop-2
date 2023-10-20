@@ -28,6 +28,14 @@ class Toy extends Product
     }
 
     /**
+     * Get all details values
+     */
+    public function getDetails()
+    {
+        return "Materiale: " . $this->getMaterialType();
+    }
+
+    /**
      * Display all class properties
      */
     public function toString()

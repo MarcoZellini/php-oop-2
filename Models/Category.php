@@ -46,6 +46,6 @@ class Category
      */
     public function toString()
     {
-        return "Name: " . $this->getName();
+        return $this->getName() . $this->getCategoryIcon();
     }
 }

@@ -9,60 +9,23 @@
     organizzate il progetto come visto stamattina a lezione usando varie sottocartelle per inserire classi, layout e dati.
 */
 
-/* DEBUG - ricordarsi di eliminare */
-$debug = true;
-
-if ($debug) {
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
-}
-
-function dd($element)
-{
-    var_dump($element);
-    die;
-}
-
-
-DEFINE('ROOT', __DIR__);
 DEFINE('DS', DIRECTORY_SEPARATOR);
+DEFINE('ROOT', __DIR__ . DS);
 DEFINE('MODELS', 'Models' . DS);
+DEFINE('PARTIALS', 'Partials' . DS);
+DEFINE('DATABASE', 'Database' . DS);
 
-require ROOT . DS . MODELS . 'Product.php';
-require ROOT . DS . MODELS . 'Food.php';
-require ROOT . DS . MODELS . 'Toy.php';
-require ROOT . DS . MODELS . 'Kennel.php';
-require ROOT . DS . MODELS . 'Category.php';
+require ROOT . MODELS . 'Product.php';
+require ROOT . MODELS . 'Food.php';
+require ROOT . MODELS . 'Toy.php';
+require ROOT . MODELS . 'Kennel.php';
+require ROOT . MODELS . 'Category.php';
 
-$product_1 = new Product('product_name', new Category('Cane'), 50);
-$product_2 = new Food('product_name', new Category('Cane'), 50, 'Crocchette', 500, '2023-12-31');
-$product_3 = new Toy('product_name', new Category('Cane'), 50, 'Legno');
-$product_4 = new Kennel('product_name', new Category('Cane'), 50, 50.5, 25, 30);
-
-// dd($product);
-
-echo $product_1->toString();
-echo '<br>';
-echo $product_2->toString();
-echo '<br>';
-echo $product_3->toString();
-echo '<br>';
-echo $product_4->toString();
-echo '<br>';
-
+require ROOT . DATABASE . 'db.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<?php include ROOT . PARTIALS . 'head.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php include ROOT . PARTIALS . 'main.php'; ?>
 
-<body>
-
-</body>
-
-</html>
+<?php include ROOT . PARTIALS . 'foot.php'; ?>

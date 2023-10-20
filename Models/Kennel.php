@@ -63,6 +63,14 @@ class Kennel extends Product
     }
 
     /**
+     * Get all details values
+     */
+    public function getDetails()
+    {
+        return "Misure: H. " . $this->getHeight() . " cm x W. " . $this->getWidth() . " cm x D. " . $this->getDepth() . " cm";
+    }
+
+    /**
      * Display all class properties
      */
     public function toString()
