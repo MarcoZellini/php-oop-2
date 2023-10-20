@@ -1,20 +1,5 @@
 <?php
 
-
-/* DEBUG - ricordarsi di eliminare */
-$debug = true;
-
-if ($debug) {
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
-}
-
-function dd($element)
-{
-    var_dump($element);
-    die;
-}
-
 $products = [];
 
 array_push(

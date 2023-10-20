@@ -11,8 +11,8 @@
 <body>
     <header id="app_header" class="bg-dark">
         <div class="container d-flex justify-content-center py-3 text-capitalize text-white">
-            <a href="#" class="nav-link mx-2 text-white">Home</a>
-            <a href="#" class="nav-link mx-2 text-white">Products</a>
+            <a href="/PHP/_projects/php-oop-2/" class="nav-link mx-2 text-white">Home</a>
+            <a href="/PHP/_projects/php-oop-2/products.php" class="nav-link mx-2 text-white">Products</a>
             <a href="#" class="nav-link mx-2 text-white">About</a>
             <!-- /.nav_links -->
         </div>
