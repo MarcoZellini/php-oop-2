@@ -4,9 +4,10 @@
             <?php foreach ($products as $product) : ?>
                 <div class="col">
                     <div class="card h-100">
-                        <div class="card-top p-3 bg-secondary-subtle">
+                        <div class="card-header p-3">
                             <h3><?= $product->getName(); ?></h3>
                             <h4><?= $product->getCategory()->toString(); ?></h4>
+                            <span class="bg-warning px-4 rounded-3"><?= get_class($product); ?></span>
                         </div>
                         <!-- /.card-top -->
                         <div class="card-body p-0">

@@ -22,10 +22,6 @@ require ROOT . MODELS . 'Kennel.php';
 require ROOT . MODELS . 'Category.php';
 
 require ROOT . DATABASE . 'db.php';
-?>
-
-<?php include ROOT . PARTIALS . 'head.php'; ?>
-
-<?php include ROOT . PARTIALS . 'main.php'; ?>
-
-<?php include ROOT . PARTIALS . 'foot.php'; ?>
+include ROOT . PARTIALS . 'head.php';
+include ROOT . PARTIALS . 'main.php';
+include ROOT . PARTIALS . 'foot.php';
