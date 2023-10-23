@@ -6,7 +6,7 @@ class Kennel extends Product
     private $width;
     private $depth;
 
-    public function __construct(string $name, Category $category, float $price, float $height, float $width, float $depth)
+    public function __construct(string $name, Category $category, $price, float $height, float $width, float $depth)
     {
         parent::__construct($name, $category, $price);
         $this->setHeight($height);

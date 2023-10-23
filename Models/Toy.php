@@ -5,7 +5,7 @@ class Toy extends Product
     private $materialType;
 
 
-    public function __construct(string $name, Category $category, float $price, string $materialType)
+    public function __construct(string $name, Category $category, $price, string $materialType)
     {
         parent::__construct($name, $category, $price);
         $this->setMaterialType($materialType);

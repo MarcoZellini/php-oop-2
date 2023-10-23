@@ -7,7 +7,7 @@ class Product
     private $poster;
     private $price;
 
-    public function __construct(string $name, Category $category, float $price)
+    public function __construct(string $name, Category $category, $price)
     {
         $this->setName($name);
         $this->setCategory($category);
@@ -77,7 +77,11 @@ class Product
      */
     public function setPrice($price)
     {
-        $this->price = $price;
+        if (is_numeric($price)) {
+            $this->price = $price;
+        } else {
+            throw new Exception('Il valore del prezzo inserito non e\' numerico!');
+        }
     }
 
     /**

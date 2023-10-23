@@ -12,7 +12,7 @@ require ROOT . MODELS . 'Toy.php';
 require ROOT . MODELS . 'Kennel.php';
 require ROOT . MODELS . 'Category.php';
 
-require ROOT . DATABASE . 'db.php';
 include ROOT . PARTIALS . 'head.php';
+require ROOT . DATABASE . 'db.php';
 include ROOT . PARTIALS . 'main_products.php';
 include ROOT . PARTIALS . 'foot.php';
