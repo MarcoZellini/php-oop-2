@@ -1,8 +1,9 @@
 <?php
 
+require __DIR__ . '/../Traits/Namable.php';
 class Product
 {
-    private $name;
+    use Namable;
     private $category;
     private $poster;
     private $price;
@@ -14,22 +15,6 @@ class Product
         $numRandom = rand(1, 100);
         $this->setPoster("https://picsum.photos/600/400?random=$numRandom");
         $this->setPrice($price);
-    }
-
-    /**
-     * Get the value of name
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set the value of name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
     }
 
     /**
